@@ -8,30 +8,36 @@
 
 % Complementante %
 
-[]::[='T','C']. 
+[]::[='T','C'].
+[]::[=>'T',+foco,'C']. 
 
 % Tiempo %
 
-['-aron']::[=>'v',+k,'T']. 
+['-aron']::[=>'v',+nom,'T']. 
+['-an']::[=>'v',+nom,'T']. 
 
 % v chiquito %
 
-[]::[=>'V', ='D',v]. 
+[]::[=>'Vt', ='D',v].
+[]::[=>'Vin',v]. 
 
 % Verbos %
 
-[arm]::[='D',+k,'V'].
+[arm]::[='D',+ac,'Vt'].
+[nad]::[='D','Vin'].
 
 
 % Determinantes %
 
-[una]::[='NSG','D',-k].
-[las]::[='NPL','D',-k].
+[una]::[='NSG','D',-ac, -foco].
+[una]::[='NSG','D',-ac].
+[las]::[='NPL','D',-nom].
 
 % Nombres %
 
 [madriguera]::['NSG'].
 [liebres]::['NPL'].
+[tortugas]::['NPL'].
 
 
 startCategory(C).
