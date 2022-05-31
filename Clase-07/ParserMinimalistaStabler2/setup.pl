@@ -62,7 +62,7 @@
 %:- ['grammars/spanish1']. % 
 %:- ['grammars/gh6']. %
 %:- ['grammars/larsonian1']. %
-:- ['grammars/hmtest1']. %
+%:- ['grammars/hmtest1']. %
 :- ['grammars/tp3'].
  
  

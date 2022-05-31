@@ -13,6 +13,7 @@
 
 []::[='T','C'].
 []::[=>'T',+foco,'C'].   % Complementante con rasgo de licenciamiento de foco
+[]::[=>'T',+wh,'C'].     % Complementante con rasgo de licenciamiento interrogativo
 
 % Tiempo %
 
@@ -38,6 +39,11 @@
 [una]::[='NSG','D',-ac, -foco].
 [una]::[='NSG','D',-ac].
 [las]::[='NPL','D',-nom].
+
+
+% Pronombres %
+
+[quiénes]::['D',-nom, -wh].
 
 % Nombres %
 
