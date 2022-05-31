@@ -1,4 +1,7 @@
-% las liebres arm-aron una madriguera 
+% TP3 - Gramáticas Formales, formalismos e implementaciones
+%
+% Integrantes: Braian Alarcón, Belén Tobares, Agustina Chiozza, Dafne Carp.
+%
 
 :- encoding(utf8).
 
@@ -9,26 +12,29 @@
 % Complementante %
 
 []::[='T','C'].
-[]::[=>'T',+foco,'C']. 
+[]::[=>'T',+foco,'C'].   % Complementante con rasgo de licenciamiento de foco
 
 % Tiempo %
 
-['-aron']::[=>'v',+nom,'T']. 
-['-an']::[=>'v',+nom,'T']. 
+['-aron']::[=>'v',+nom,'T'].   % rasgo "nom" para referirse al caso nominativo
+['-an']::[=>'v',+nom,'T'].     %
+['-aban']::[=>'v',+nom,'T'].   %
 
 % v chiquito %
 
-[]::[=>'Vt', ='D',v].
-[]::[=>'Vin',v]. 
+[]::[=>'Vt', ='D',v].    % Vt = Verbo transitivo
+[]::[=>'Vin',v].         % Vin = Verbo intransitivo
 
 % Verbos %
 
-[arm]::[='D',+ac,'Vt'].
-[nad]::[='D','Vin'].
-
+[arm]::[='D',+ac,'Vt'].   % rasgo "ac" para referirse al caso acusativo
+[mir]::[='D',+ac,'Vt'].   %
+[nad]::[='D','Vin'].      %
 
 % Determinantes %
 
+[esa]::[='NSG','D',-ac, -foco].
+[esa]::[='NSG','D',-ac].
 [una]::[='NSG','D',-ac, -foco].
 [una]::[='NSG','D',-ac].
 [las]::[='NPL','D',-nom].
